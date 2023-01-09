@@ -11,14 +11,17 @@ I intend to have the add-in check through the body of the contract for any capit
 
 Foreseeable issues:
 - defined terms that begin a sentence may be hard to identify
+- testing on windows environment
 
 Another use case may be to check for cross referencing errors without having to update fields - I will park this idea for now.
 
 ## Links
 
-Original code template: https://github.com/OfficeDev/Office-Addin-TaskPane-JS 
+Original code template: https://github.com/OfficeDev/Office-Addin-TaskPane-JS
+
 Following this tutorial (upto "Replace the text of a range"): https://learn.microsoft.com/en-us/office/dev/add-ins/tutorials/word-tutorial#insert-a-range-of-text
-Useful overview of how Office Add-ins work: https://learn.microsoft.com/en-us/office/dev/add-ins/overview/office-add-ins 
+
+Useful overview of how Office Add-ins work: https://learn.microsoft.com/en-us/office/dev/add-ins/overview/office-add-ins
 
 
 ## To set up a project:
@@ -26,6 +29,8 @@ Useful overview of how Office Add-ins work: https://learn.microsoft.com/en-us/of
 2. to create a new project: yo office
 3. to test: npm start
 4. Before commiting your changes to git, create a .gitignore with the following code: node_modules/
+
+=============================================================================
 
 I failed many times to get the dev server running right, espcially where you create more than one project (this took me three days and two deleted repos to debug). Some tips:
 - clear your Word cache (go to /Users/<username>/Library/Containers/com.microsoft.Word/Data and clear the contents to ensure no other manifest.xml is running)
