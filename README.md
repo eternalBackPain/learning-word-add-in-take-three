@@ -25,6 +25,7 @@ Useful overview of how Office Add-ins work: https://learn.microsoft.com/en-us/of
 1. ensure yeoman is installed globally: npm install -g yo generator-office
 2. to create a new project: yo office
 3. to test: npm start
+4. Before commiting your changes to git, create a .gitignore with the following code: node_modules/
 
 I failed many times to get the dev server running right, espcially where you create more than one project (this took me three days and two deleted repos to debug). Some tips:
 - clear your Word cache (go to /Users/<username>/Library/Containers/com.microsoft.Word/Data and clear the contents to ensure no other manifest.xml is running)
