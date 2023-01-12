@@ -30,6 +30,7 @@ npm install @fluentui/react
 then see docs: https://developer.microsoft.com/en-us/fluentui/#/controls/web
 
 Example of how to import component (and pass a prop):
+```
 import { DefaultButton } from 'office-ui-fabric-react';
 
 const MyComponent = () => {
@@ -39,8 +40,9 @@ const MyComponent = () => {
     </div>
   );
 };
-
+```
 Some Fabric components take in a render functions to allow customizing certain parts of the component. An example with TextField:
+```
 import { TextField } from 'office-ui-fabric-react';
 
 const MyComponent = () => {
@@ -51,18 +53,18 @@ const MyComponent = () => {
     </div>
   );
 };
-
+```
 ## To set up a project:
-1. ensure yeoman is installed globally: npm install -g yo generator-office
-2. to create a new project: yo office
-3. to test: npm start
-4. Before commiting your changes to git, create a .gitignore with the following code: node_modules/
+1. ensure yeoman is installed globally: `npm install -g yo generator-office`
+2. to create a new project: `yo office`
+3. to test: `npm start`
+4. Before commiting your changes to git, create a `.gitignore` with the following code: `node_modules/`
 
 I failed many times to get the dev server running right, espcially where you create more than one project (this took me three days and two deleted repos to debug). Some tips:
-- clear your Word cache (go to /Users/<username>/Library/Containers/com.microsoft.Word/Data and clear the contents to ensure no other manifest.xml is running)
-- ensure your dev server is not running another project's files (I could not get localserver:3000 to stop running the files of the first project I created so I amended the manifest.xml and package.json to run localhost:3001 and it worked - hopefully this error wont occur when pushing to prod)
+- clear your Word cache (go to `/Users/<username>/Library/Containers/com.microsoft.Word/Data` and clear the contents to ensure no other manifest.xml is running)
+- ensure your dev server is not running another project's files (I could not get `localserver:3000` to stop running the files of the first project I created so I amended the manifest.xml and package.json to run `localhost:3001` and it worked - hopefully this error wont occur when pushing to prod)
 
 ### issue logs from failed attempts
-1. The wrong manifest.xml file is being run (the application name used is from the old apps made)
+1. The wrong `manifest.xml` file is being run (the application name used is from the old apps made)
 2. The wrong directory is being used for 'loader' files in the node packages (the path is shown in the Word error: "Html Webpack Plugin: Error: Child compilation failed: Module not found:)
-3. the webpack.config.js file seems to be doing something wrong as the error message refers to webpack
+3. the `webpack.config.js` file seems to be doing something wrong as the error message refers to webpack
